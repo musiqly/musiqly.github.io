@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Audio Segmentor</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/range-selector.css">
+        <link rel="stylesheet" href="css/generalStyle.css">
+        <script type="text/javascript" src="js/utils.js"></script>
+        <script type="text/javascript" src="js/range-selector.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="audio-container">
+                <h1>Audio</h1>
+                <h3 class="audio-title"></h3>
+                <div>
+                    <span class="current-time">--:--.-</span>
+                    <input type="range" id="seekbar">
+                    <span class="max-time">--:--.-</span>
+                </div>
+                <div id="segment-selector" class="range-selector">
+                </div>
+                <div id="controls">
+                    <button class="control-btn speedDecrement-btn"></button>
+                    <button class="control-btn backward-btn"></button>
+                    <button class="control-btn play-btn"></button>
+                    <button class="control-btn playSelected-btn"></button>
+                    <button class="control-btn forward-btn"></button>
+                    <button class="control-btn speedIncrement-btn"></button>
+                </div>
+            </div>
+            <div id="workBench-container">
+                <div id="segmentWorkbench">
+                    <div id="segmentControls">
+                        <diV id="timeStampInp" class="durationInput">
+                            <div id="segmentStartInp">
+                                <span>Start</span>
+                                <button id="jumpSegmentStartInp"></button>
+                                <input type="number" size="2"><span>:</span><input type="number" maxlength="2"><span>.</span><input type="number" maxlength="2">
+                            </div>
+                            <div id="segmentEndInp">
+                                <span>End</span>
+                                <button id="jumpSegmentEndInp"></button>
+                                <input type="number"><span>:</span><input type="number"><span>.</span><input type="number">
+                            </div>
+                        </div>
+                        <div id="segmentArtistsDisplay" class="listChoice">
+                            <h4>Artists in this segment:</h4>
+                            <div>
+                                <ul>
+                                </ul>
+                            </div>
+                            <div>
+                                <select id="segmentArtistField">
+                                    <option value="{[Hint]}" disabled selected>Select Artist</option>
+                                    <option value="{[BGM]}">Background Music</option>
+                                </select>
+                                <button id="addSegmentArtistBtn"></button>
+                                <button id="addSegmentArtistAndMarkBtn"></button>
+                            </div>
+                        </div>
+                        <button id="addSegmentButton">Mark Segment</button>
+                    </div>
+                    <div id="globalControls">
+                        <div id="playbackSpeedDisplay">
+                            <span>Playback Speed:</span>
+                            <span>x1</span>
+                        </div>
+                        <diV id="pointerPositionDisplay" class="durationInput">
+                            <div>
+                                <span>Pointer</span>
+                                <button id="jumpPointertoStartBtn" class="backBtn"></button>
+                                <button id="jumpPointertoEndBtn"></button>
+                                <input type="number" size="2"><span>:</span><input type="number" maxlength="2"><span>.</span><input type="number" maxlength="2">
+                            </div>
+                        </div>
+                        <div id="artsistView">
+                            <h3>Add Artist</h3>
+                            <div class="simpleInput">
+                                <input id="addArtistField">
+                                <button id="addArtistButton">Add Artist</button>
+                            </div>
+                            <div id="actions">
+                                <div id="virtual-actions">
+                                    <button id="loadAudioBtn">Load Audio</button>
+                                    <button id="loadLyricsBtn">Load Lyrics</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="referenceDisplay">
+                    <div id="lyricsView">
+                        <div class="headerWithActionBtns">
+                            <span>Lyrics:</span>
+                        </div>
+                        <p id="lyricsDisplay"></p>
+                    </div>
+                    <div id="segmentView">
+                        <div class="headerWithActionBtns">
+                            <span>Generated Segment</span>
+                            <button id="downloadSegmentationButton" class="downloadBtn"></button>
+                        </div>
+                        <table id="segmentResultDisplay">
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="hiddenElements">
+            <input type="file" id="audioInp">
+            <input type="file" id="lyricsInp">
+            <a id="downloadSegmentationLink"></a>
+        </div>
+        <div id="toastBox">
+            <span>
+                {[Toast]}
+            </span>
+        </div>
+        <div id="dialog">
+            <h3>Dialog</h3>
+            <div>
+                <p>
+                    Dialog will look like this
+                </p>
+            </div>
+            <button>OK</button>
+        </div>
+    </body>
+</html>

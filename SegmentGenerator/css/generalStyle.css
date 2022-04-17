@@ -1,0 +1,178 @@
+.control-btn {
+    height: 25px;
+    width: 25px;
+    border: 1px solid;
+    margin: 5px;
+    padding: 3px;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+}
+
+.backward-btn {
+    background-image: url("../assets/backward.svg");
+}
+
+.play-btn {
+    background-image: url("../assets/play.svg");
+}
+
+.playSelected-btn {
+    background-image: url("../assets/play.svg");
+    background-color: #3264fe;
+}
+
+.forward-btn {
+    background-image: url("../assets/forward.svg");
+}
+
+
+.speedIncrement-btn {
+    background-image: url("../assets/add.svg");
+}
+
+.speedDecrement-btn {
+    background-image: url("../assets/remove.svg");
+}
+
+.simpleInput {
+    display: flex;
+}
+
+.durationInput {
+    display: flex;
+}
+
+.durationInput div {
+    flex: 1 1 auto;
+    display: flex;
+    margin: 5px;
+}
+
+.durationInput div span {
+    flex: 0 1 auto;
+    margin: 2px;
+}
+
+.durationInput div button {
+    flex: 0 0 auto;
+    background-image: url("../assets/forward.svg");
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    padding: 3px;
+    border: 1px solid grey;
+}
+
+.durationInput div .backBtn {
+    background-image: url("../assets/backward.svg");
+}
+
+.durationInput input {
+    flex: 1 1 auto;
+    width: 100%;
+}
+
+.simpleInput span {
+    flex: 0 1 auto;
+}
+
+.simpleInput input {
+    flex: 1 1 auto;
+}
+
+.simpleChoice {
+    display: flex;
+    flex-flow: row;
+}
+
+.simpleChoice select {
+    flex: 1 1 auto;
+}
+
+.simpleChoice button {
+    padding: 1px;
+    flex: 0 1 auto;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+
+.listChoice {
+    max-height: 100%;
+}
+
+.listChoice ul {
+    list-style: none;
+    padding: 0;
+    border: 0px;
+    margin-bottom: 0;
+}
+
+.listChoice ul li {
+    border: 1px solid grey;
+    padding: 2px;
+    display: flex;
+}
+
+.listChoice ul li span {
+    flex: 1 1 auto;
+}
+
+.listChoice ul li button, .headerWithActionBtns button {
+    flex: 0 0 auto;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    height: 18px;
+    width: 18px;
+    margin: 3px;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+.listChoice ul li button {
+    background-image: url("../assets/remove.svg");
+}
+
+.listChoice div:first-of-type {
+    max-height: 8vh;
+}
+
+.listChoice div:last-of-type {
+    border: 1px solid grey;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.listChoice div select {
+    flex: 1 1 auto;
+}
+
+.listChoice div button {
+    flex: 0 1 auto;
+    background-image: url("../assets/add.svg");
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    padding: 3px;
+    border: 1px solid grey;
+}
+
+.headerWithActionBtns {
+    display: flex;
+    flex-flow: row;
+    border: 1px solid grey;
+}
+
+.headerWithActionBtns span {
+    flex: 1 1 auto;
+    font-size: x-large;
+}
+
+.downloadBtn {
+    background-image: url("../assets/download.svg");
+}
